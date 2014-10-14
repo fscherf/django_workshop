@@ -41,6 +41,7 @@ INSTALLED_APPS = (
 
 LOCAL_APPS = (
     'blog',
+    'bootstrap3_theme',
 )
 
 INSTALLED_APPS += LOCAL_APPS
