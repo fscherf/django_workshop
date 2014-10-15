@@ -39,6 +39,12 @@ INSTALLED_APPS = (
     'django_extensions',
 )
 
+LOCAL_APPS = (
+    'blog',
+)
+
+INSTALLED_APPS += LOCAL_APPS
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
