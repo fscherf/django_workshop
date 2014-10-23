@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from models import BlogPost
 from forms import BlogPostForm
 
@@ -19,6 +20,7 @@ def view_posts(request, post_id=None):
         }
     )
 
+@login_required
 def add_post(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST)
