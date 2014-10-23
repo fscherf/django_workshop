@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for i in posts %}
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a href="{% url "view_posts" i.id %}">{{ i.title }}</a></h2>
+      <p class="blog-post-meta">{{ i.created }} <a>{{ i.author.username }}</a></p>
+      <p>
+        {% autoescape off %}
+          {{ i.content }}
+        {% endautoescape %}
+      </p>
+    </div>
+  {% endfor %}
+{% endblock %}
